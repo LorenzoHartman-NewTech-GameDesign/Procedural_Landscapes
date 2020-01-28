@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035560750061375520}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: BlueTestCubeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4880452708968674140}
   - component: {fileID: 3390923161187523189}
   - component: {fileID: 2763723781644705510}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: BlueTestCubePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

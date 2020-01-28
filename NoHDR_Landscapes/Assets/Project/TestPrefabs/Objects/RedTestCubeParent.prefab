@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2289283403727575101}
   - component: {fileID: 7678000609724968250}
   - component: {fileID: 6433682122753723433}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: RedTestCubePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8113396642866987895}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: RedTestCubeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

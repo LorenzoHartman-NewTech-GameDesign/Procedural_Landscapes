@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6127783831528278537}
   - component: {fileID: 5265355732975042266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   iterations: 1
   input: "F+F+F-F-F\u2212F\u2212F+F+F+F\u2212F\u2212F+F\u2212F+F\u2212F\u2212F+F\u2212F+F\u2212F\u2212F+F+F+F\u2212F\u2212F+F"
   branchRotation: 53
+  resetPivot: 0
   result: "F[-F]F[+F][F]+F[-F]F[+F][F]+F[-F]F[+F][F]-F[-F]F[+F][F]-F[-F]F[+F][F]\u2212F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]+F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]+F[-F]F[+F][F]+F[-F]F[+F][F]\u2212F[-F]F[+F][F]\u2212F[-F]F[+F][F]+F[-F]F[+F][F]"
   cylinder: {fileID: 5758468298305212914}
 --- !u!1 &5758468298227396908
@@ -62,7 +63,7 @@ GameObject:
   - component: {fileID: 5758468298227396912}
   - component: {fileID: 5758468298227396913}
   - component: {fileID: 5758468298227396910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5758468298305212917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Branch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5758468298460957036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2dTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

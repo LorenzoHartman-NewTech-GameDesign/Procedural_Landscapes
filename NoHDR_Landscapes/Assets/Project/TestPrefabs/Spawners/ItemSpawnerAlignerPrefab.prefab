@@ -44,13 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPickFrom:
-  - {fileID: 5751242409522888828, guid: cd9f79cac128adf419f68fec917e45a3, type: 3}
-  - {fileID: 4267865315408355805, guid: b4ebea69d3b967240a9a94eaa5274b1a, type: 3}
   - {fileID: 1150978753569194731, guid: df1064d9ff4d9244d9419234423d2254, type: 3}
   - {fileID: 5862801413117827409, guid: 7609d9e85b53d6247997b83bb014e2c6, type: 3}
-  - {fileID: 5758468298460957034, guid: 5dbb220ca10bfe24fb7d3c4f8d590808, type: 3}
   raycastDistance: 100
-  overlapTestBoxSize: 1
+  overlapTestBoxSize: 40
   spawnedObjectLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 256
