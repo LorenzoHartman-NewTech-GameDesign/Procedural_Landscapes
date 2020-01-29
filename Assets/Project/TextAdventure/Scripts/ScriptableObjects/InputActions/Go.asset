@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d12d8623557f84a8a0db83e55f9872, type: 3}
   m_Name: Go
   m_EditorClassIdentifier: 
-  keyWord: 
+  keyWord: create

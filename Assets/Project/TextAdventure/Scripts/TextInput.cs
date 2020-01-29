@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class TextInput : MonoBehaviour
 {
-    public bool disabled = true; 
+    public bool disabled = true;
+    public CharacterController characterController; 
     public Canvas canvas; 
     public InputField inputField; 
 
@@ -28,10 +29,12 @@ public class TextInput : MonoBehaviour
         if (disabled)
         {
             canvas.gameObject.SetActive(false);
+            characterController.enabled = true; 
         }
         if (!disabled)
         {
             canvas.gameObject.SetActive(true);
+            characterController.enabled = false;
         }
 
 

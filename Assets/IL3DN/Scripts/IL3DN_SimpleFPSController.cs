@@ -63,7 +63,7 @@ namespace IL3DN
                 m_Jump = Input.GetButtonDown("Jump");
             }
 
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded && m_CharacterController.enabled == true)
+            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 PlayLandingSound();
                 m_MoveDir.y = 0f;
@@ -142,15 +142,21 @@ namespace IL3DN
         /// </summary>
         private void PlayJumpSound()
         {
-            if (isInSpecialSurface)
+
+            if (m_CharacterController.enabled == true)
             {
-                m_AudioSource.clip = jumpSoundOverride;
+                if (isInSpecialSurface)
+                {
+                    m_AudioSource.clip = jumpSoundOverride;
+                }
+                else
+                {
+                    m_AudioSource.clip = m_JumpSound;
+                }
+                m_AudioSource.Play();
             }
-            else
-            {
-                m_AudioSource.clip = m_JumpSound;
-            }
-            m_AudioSource.Play();
+
+           
         }
 
         /// <summary>
@@ -180,7 +186,7 @@ namespace IL3DN
         /// </summary>
         private void PlayFootStepAudio()
         {
-            if (!m_CharacterController.isGrounded)
+            if (!m_CharacterController.isGrounded | m_CharacterController.enabled == false)
             {
                 return;
             }
