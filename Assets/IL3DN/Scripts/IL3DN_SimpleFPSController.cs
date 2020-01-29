@@ -38,6 +38,8 @@ namespace IL3DN
         private AudioClip landSoundOverride;
         private bool isInSpecialSurface;
 
+   
+
         /// <summary>
         /// Initialize the controller
         /// </summary>
@@ -61,7 +63,7 @@ namespace IL3DN
                 m_Jump = Input.GetButtonDown("Jump");
             }
 
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded && m_CharacterController.enabled == true)
             {
                 PlayLandingSound();
                 m_MoveDir.y = 0f;
