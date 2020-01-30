@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SimpleTestVersion : MonoBehaviour
@@ -10,14 +8,20 @@ public class SimpleTestVersion : MonoBehaviour
     public string myText;
 
     public bool disabled = true;
+    public Transform player; 
     public CharacterController characterController;
     public Canvas canvas;
 
-    public GameObject terrain;
     public GameObject ocean;
     public GameObject tree;
     public GameObject rock;
     public GameObject grass;
+
+    public GameObject normalCamera;
+    public GameObject snowCamera;
+
+    public GameObject desertTerrain;
+    public GameObject snowTerrain;
 
     private void Start()
     {
@@ -26,7 +30,7 @@ public class SimpleTestVersion : MonoBehaviour
     private void Update()
     {
 
-        
+
 
         myText = mainInputField.text.ToLower();
 
@@ -50,7 +54,22 @@ public class SimpleTestVersion : MonoBehaviour
         {
             mainInputField.text = "";
             displayText.text = "You regret wearing Crocs";
-            terrain.SetActive(true);
+            desertTerrain.SetActive(true);
+            snowTerrain.SetActive(false);
+            normalCamera.SetActive(true);
+            snowCamera.SetActive(false);
+            player.transform.position += new Vector3 (0,100,0); 
+        }
+
+        if (myText == "create snow")
+        {
+            mainInputField.text = "";
+            displayText.text = "Let it snow";
+            desertTerrain.SetActive(false);
+            snowTerrain.SetActive(true);
+            normalCamera.SetActive(false);
+            snowCamera.SetActive(true);
+            player.transform.position += new Vector3(0, 100, 0);
         }
 
         if (myText == "create ocean")
@@ -89,8 +108,9 @@ public class SimpleTestVersion : MonoBehaviour
 
 
 
+
     }
-    
+
 
 
 

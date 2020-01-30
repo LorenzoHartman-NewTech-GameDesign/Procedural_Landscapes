@@ -56,6 +56,9 @@ namespace IL3DN
 
         private void Update()
         {
+            m_Camera = Camera.main;
+
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
