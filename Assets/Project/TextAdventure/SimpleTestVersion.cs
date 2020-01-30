@@ -58,7 +58,7 @@ public class SimpleTestVersion : MonoBehaviour
             snowTerrain.SetActive(false);
             normalCamera.SetActive(true);
             snowCamera.SetActive(false);
-            player.transform.position += new Vector3 (0,100,0); 
+            player.transform.position += new Vector3 (0,65,0); 
         }
 
         if (myText == "create snow")
@@ -69,7 +69,7 @@ public class SimpleTestVersion : MonoBehaviour
             snowTerrain.SetActive(true);
             normalCamera.SetActive(false);
             snowCamera.SetActive(true);
-            player.transform.position += new Vector3(0, 100, 0);
+            player.transform.position += new Vector3(0, 65, 0);
         }
 
         if (myText == "create ocean")
