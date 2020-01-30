@@ -7,6 +7,10 @@ public class SimpleTestVersion : MonoBehaviour
     public Text displayText;
     public string myText;
 
+    public ItemAreaSpawner treeSpawner;
+    public ItemAreaSpawner rockSpawner;
+    public ItemAreaSpawner grassSpawner;
+
     public bool disabled = true;
     public Transform player; 
     public CharacterController characterController;
@@ -22,6 +26,13 @@ public class SimpleTestVersion : MonoBehaviour
 
     public GameObject desertTerrain;
     public GameObject snowTerrain;
+
+    public Light directionalLight;
+    public Material originalSkybox;
+    public Material rainSkybox;
+
+    public GameObject rainParticles; 
+
 
     private void Start()
     {
@@ -46,6 +57,7 @@ public class SimpleTestVersion : MonoBehaviour
         if (!disabled)
         {
             canvas.gameObject.SetActive(true);
+            mainInputField.ActivateInputField();
             characterController.enabled = false;
         }
 
@@ -72,6 +84,25 @@ public class SimpleTestVersion : MonoBehaviour
             player.transform.position += new Vector3(0, 65, 0);
         }
 
+
+        if (myText == "rain on")
+        {
+            mainInputField.text = "";
+            displayText.text = "The world looks a lot more grey all of the sudden...";
+            RenderSettings.skybox = rainSkybox;
+            rainParticles.SetActive(true);
+            directionalLight.enabled = false;           
+        }
+
+        if (myText == "rain off")
+        {
+            mainInputField.text = "";
+            displayText.text = "All must fade eventually, even the dark";
+            RenderSettings.skybox = originalSkybox;
+            rainParticles.SetActive(false);
+            directionalLight.enabled = true;
+        }
+
         if (myText == "create ocean")
         {
             mainInputField.text = "";
@@ -82,23 +113,23 @@ public class SimpleTestVersion : MonoBehaviour
         if (myText == "create tree")
         {
             mainInputField.text = "";
-            displayText.text = "Some green always looks nice";
-            tree.SetActive(true);
+            displayText.text = "There is nothing wrong with having a tree as a friend. ― Bob Ross";
+            treeSpawner.Spawn(); 
         }
 
 
         if (myText == "create rock")
         {
-            //mainInputField.text = "";
+            mainInputField.text = "";
             displayText.text = "No not THE Rock";
-            rock.SetActive(true);
+            rockSpawner.Spawn();
         }
 
         if (myText == "create grass")
         {
             mainInputField.text = "";
             displayText.text = "Feel the wind blowing through your hair and grass...";
-            grass.SetActive(true);
+            grassSpawner.Spawn();
         }
 
 

@@ -54,6 +54,8 @@ namespace Assets.Scripts.MapGenerator.Generators
 
         public void Generate()
         {
+            Random.InitState(0);
+
             if (Randomize)
             {
                 Offset = Random.Range(0f, 9999f);

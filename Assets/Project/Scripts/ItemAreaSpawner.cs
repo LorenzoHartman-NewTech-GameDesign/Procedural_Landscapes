@@ -9,7 +9,9 @@ public class ItemAreaSpawner : MonoBehaviour
 
     public GameObject[] objects;
     public bool rotated;
-    public LayerMask spawnedObjectLayer; 
+    public LayerMask spawnedObjectLayer;
+
+    private Transform root; 
 
     public float itemXSpread = 10;
     public float itemYSpread = 0;
@@ -19,8 +21,10 @@ public class ItemAreaSpawner : MonoBehaviour
     public float overlapTestBoxSize = 1f;
 
     // Start is called before the first frame update
-    void Start()
+    public void Spawn()
     {
+        root = new GameObject(objects[0].name).transform;
+
         for (int i = 0; i < numItemsToSpawn; i++)
         {
             SpreadItem();
@@ -68,7 +72,7 @@ public class ItemAreaSpawner : MonoBehaviour
             {
                 Debug.Log("spawned object");
                 int randomIndex = Random.Range(0, objects.Length);
-                GameObject clone = Instantiate(objects[randomIndex], hit.point, spawnRotation);
+                GameObject clone = Instantiate(objects[randomIndex], hit.point, spawnRotation, root);
 
 
             }
