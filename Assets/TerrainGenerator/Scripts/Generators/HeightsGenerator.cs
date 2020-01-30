@@ -45,6 +45,13 @@ namespace Assets.Scripts.MapGenerator.Generators
             }
         }
 
+
+        //ADDED THIS IN IF YOU WANT TO GENERATE A NEW TERRAIN EVERYTIME THE GAME STARTS
+        public void Start()
+        {
+            Generate();
+        }
+
         public void Generate()
         {
             if (Randomize)

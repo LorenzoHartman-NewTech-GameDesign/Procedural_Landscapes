@@ -26,7 +26,9 @@ public class SimpleTestVersion : MonoBehaviour
     private void Update()
     {
 
-        myText = mainInputField.text;
+        
+
+        myText = mainInputField.text.ToLower();
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -44,38 +46,38 @@ public class SimpleTestVersion : MonoBehaviour
         }
 
 
-        if (myText == "Create Desert")
+        if (myText == "create desert")
         {
-            mainInputField.text = " ";
+            mainInputField.text = "";
             displayText.text = "You regret wearing Crocs";
             terrain.SetActive(true);
         }
 
-        if (myText == "Create Ocean")
+        if (myText == "create ocean")
         {
-            mainInputField.text = " ";
+            mainInputField.text = "";
             displayText.text = "You should have brought flippers";
             ocean.SetActive(true);
         }
 
-        if (myText == "Create Tree")
+        if (myText == "create tree")
         {
-            mainInputField.text = " ";
+            mainInputField.text = "";
             displayText.text = "Some green always looks nice";
             tree.SetActive(true);
         }
 
 
-        if (myText == "Create Rock")
+        if (myText == "create rock")
         {
-            mainInputField.text = " ";
+            //mainInputField.text = "";
             displayText.text = "No not THE Rock";
             rock.SetActive(true);
         }
 
-        if (myText == "Create Grass")
+        if (myText == "create grass")
         {
-            mainInputField.text = " ";
+            mainInputField.text = "";
             displayText.text = "Feel the wind blowing through your hair and grass...";
             grass.SetActive(true);
         }

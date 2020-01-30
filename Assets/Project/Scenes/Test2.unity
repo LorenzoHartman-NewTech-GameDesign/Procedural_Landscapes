@@ -372,6 +372,11 @@ PrefabInstance:
       propertyPath: overlapTestBoxSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3168301527423466800, guid: 9cd5725813d7aac40ada9c7886c2fd71,
+        type: 3}
+      propertyPath: raycastDistance
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd5725813d7aac40ada9c7886c2fd71, type: 3}
 --- !u!1001 &710345852
@@ -492,6 +497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: overlapTestBoxSize
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168301527423466800, guid: 9cd5725813d7aac40ada9c7886c2fd71,
+        type: 3}
+      propertyPath: raycastDistance
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd5725813d7aac40ada9c7886c2fd71, type: 3}
