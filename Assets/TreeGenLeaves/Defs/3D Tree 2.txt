@@ -1,7 +1,0 @@
-// 3D Tree 2
-
-axiom=F
-angle=22.5
-number of derivations=1
-
-F=(1)F+F-F-F+F+F+F-F-F+F-F+F-F-F+F-F+F-F-F+F+F+F-F-F+F
