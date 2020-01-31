@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using GlobalSnowEffect; 
 
 public class SimpleTestVersion : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SimpleTestVersion : MonoBehaviour
     public ItemAreaSpawner treeSpawner;
     public ItemAreaSpawner rockSpawner;
     public ItemAreaSpawner grassSpawner;
+
+    public GlobalSnow globalSnowEffect; 
 
     public bool disabled = true;
     public Transform player; 
@@ -70,7 +73,8 @@ public class SimpleTestVersion : MonoBehaviour
             snowTerrain.SetActive(false);
             normalCamera.SetActive(true);
             snowCamera.SetActive(false);
-            player.transform.position += new Vector3 (0,65,0); 
+            GameObject.Find("SnowParticleSystem").SetActive(false);
+
         }
 
         if (myText == "create snow")
@@ -81,7 +85,10 @@ public class SimpleTestVersion : MonoBehaviour
             snowTerrain.SetActive(true);
             normalCamera.SetActive(false);
             snowCamera.SetActive(true);
-            player.transform.position += new Vector3(0, 65, 0);
+            GameObject.Find("SnowParticleSystem").SetActive(true);
+
+
+            globalSnowEffect.UpdateProperties(); 
         }
 
 
@@ -114,7 +121,8 @@ public class SimpleTestVersion : MonoBehaviour
         {
             mainInputField.text = "";
             displayText.text = "There is nothing wrong with having a tree as a friend. ― Bob Ross";
-            treeSpawner.Spawn(); 
+            treeSpawner.Spawn();
+            globalSnowEffect.UpdateProperties();
         }
 
 
@@ -123,6 +131,7 @@ public class SimpleTestVersion : MonoBehaviour
             mainInputField.text = "";
             displayText.text = "No not THE Rock";
             rockSpawner.Spawn();
+            globalSnowEffect.UpdateProperties();
         }
 
         if (myText == "create grass")

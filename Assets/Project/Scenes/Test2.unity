@@ -421,19 +421,19 @@ MonoBehaviour:
   _minimumAltitudeVegetationOffset: 0
   _snowTint: {r: 1, g: 1, b: 1, a: 1}
   _altitudeScatter: 20
-  _altitudeBlending: 25
+  _altitudeBlending: 20
   _distanceOptimization: 0
   _detailDistance: 100
   _distanceSnowColor: {r: 0.7882, g: 0.8235, b: 0.9921, a: 1}
   _distanceIgnoreNormals: 0
   _distanceIgnoreCoverage: 0
-  _smoothCoverage: 1
+  _smoothCoverage: 0
   _coverageExtension: 1
   _coverageResolution: 3
-  _groundCoverage: 0
-  _slopeThreshold: 0.7
-  _slopeSharpness: 0.5
-  _slopeNoise: 0.5
+  _groundCoverage: 0.5
+  _slopeThreshold: 0.1
+  _slopeSharpness: 0.795
+  _slopeNoise: 0.639
   _distanceSlopeThreshold: 0.7
   _coverageMask: 0
   _coverageMaskTexture: {fileID: 0}
@@ -443,9 +443,9 @@ MonoBehaviour:
   _coverageUpdateMethod: 1
   _reliefAmount: 0.3
   _occlusion: 1
-  _occlusionIntensity: 1.255
-  _glitterStrength: 0.75
-  _footprints: 1
+  _occlusionIntensity: 0.637
+  _glitterStrength: 0.756
+  _footprints: 0
   _footprintsAutoFPS: 1
   _footprintsDuration: 60
   _footprintsScale: 1
@@ -454,13 +454,13 @@ MonoBehaviour:
   _snowfallIntensity: 0.466
   _snowfallUseIllumination: 0
   _snowfallReceiveShadows: 0
-  _maxExposure: 0.85
+  _maxExposure: 1.575
   _smoothness: 0.9
-  _snowAmount: 1.39
+  _snowAmount: 2
   _enableHotKeys: 0
   _cameraFrost: 1
-  _cameraFrostIntensity: 0.35
-  _cameraFrostSpread: 1.2
+  _cameraFrostIntensity: 1.5
+  _cameraFrostSpread: 1.15
   _floatingPointNormalsBuffer: 0
   _layerMask:
     serializedVersion: 2
@@ -470,10 +470,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _defaultExclusionLayer: 27
-  _terrainMarks: 1
+  _terrainMarks: 0
   _terrainMarksDuration: 180
   _terrainMarksDefaultSize: 0.25
-  _terrainMarksAutoFPS: 1
+  _terrainMarksAutoFPS: 0
   _terrainMarksViewDistance: 200
   terrainMarksTextureSize: 2048
   _updateSpeedTree: 0
@@ -481,8 +481,8 @@ MonoBehaviour:
   _fixMaterials: 0
   _opaqueCutout: 0
   _fixTreeOpaque: 0
-  _billboardCoverage: 1.4
-  _grassCoverage: 0.75
+  _billboardCoverage: 2
+  _grassCoverage: 1
   _characterController: {fileID: 1739364525}
   _maskEditorEnabled: 0
   _maskTextureResolution: 1024
@@ -1755,6 +1755,7 @@ MonoBehaviour:
   treeSpawner: {fileID: 1440096634}
   rockSpawner: {fileID: 2051725908}
   grassSpawner: {fileID: 1743362252}
+  globalSnowEffect: {fileID: 598213197}
   disabled: 0
   player: {fileID: 1735438669}
   characterController: {fileID: 1739364525}
